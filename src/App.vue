@@ -34,7 +34,7 @@ export default {
       if (this.loading)
         return
       this.loading = true
-      fetch(`http://43.128.41.29:5000/?p=${this.paramsBudget / 100.0}&f=${this.flopsBudget / 100.0}`)
+      fetch(`https://api.randomkernel.com/?p=${this.paramsBudget / 100.0}&f=${this.flopsBudget / 100.0}`)
           .then(response => response.json())
           .then(response => {
             let highlighted = hljs.highlight('python', response['torch'])
@@ -47,14 +47,6 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 
 .code-style {
   text-align: left;
