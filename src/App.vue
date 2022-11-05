@@ -9,8 +9,21 @@
       <b> {{ loading ? "Sampling" : "Click to Sample" }} </b>
     </el-button>
     <br><br>
-    <div class="code-style">
-      <div v-html="torchCode"/>
+    <div>
+      <el-radio-group v-model="viewChoice" v-show="loaded">
+        <el-radio label="torch" size="large"> PyTorch Code </el-radio>
+        <el-radio label="tvm" size="large"> TVM Code </el-radio>
+        <el-radio label="vars" size="large"> Variable Fills </el-radio>
+        <el-radio label="vis" size="large"> Visualization </el-radio>
+      </el-radio-group>
+      <div class="code-style">
+        <div v-show="viewChoice === 'torch'" v-html="torchCode"/>
+        <div v-show="viewChoice === 'tvm'" v-html="tvmCode"/>
+        <div v-show="viewChoice === 'vars'" v-html="varsCode"/>
+      </div>
+      <div v-show="viewChoice === 'vis'">
+        Working In Progress
+      </div>
     </div>
   </div>
 </template>
@@ -25,8 +38,12 @@ export default {
     return {
       flopsBudget: 30,
       paramsBudget: 30,
+      loaded: false,
       loading: false,
-      torchCode: ''
+      torchCode: '',
+      tvmCode: '',
+      varsCode: '',
+      viewChoice: 'torch'
     }
   },
   methods: {
@@ -37,8 +54,10 @@ export default {
       fetch(`https://api.randomkernel.com/?p=${this.paramsBudget / 100.0}&f=${this.flopsBudget / 100.0}`)
           .then(response => response.json())
           .then(response => {
-            let highlighted = hljs.highlight('python', response['torch'])
-            this.torchCode = `${highlighted.value}`
+            this.torchCode = `${hljs.highlight('python', response['torch']).value}`
+            this.tvmCode = `${hljs.highlight('python', response['tvm']).value}`
+            this.varsCode = `${hljs.highlight('json', response['vars']).value}`
+            this.loaded = true
             this.loading = false
           })
     }
