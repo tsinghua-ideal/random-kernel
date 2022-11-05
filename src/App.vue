@@ -37,8 +37,8 @@ export default {
   name: 'App',
   data() {
     return {
-      flopsBudget: 30,
-      paramsBudget: 30,
+      flopsBudget: 50,
+      paramsBudget: 50,
       loaded: false,
       loading: false,
       torchCode: '',
