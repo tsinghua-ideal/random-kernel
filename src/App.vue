@@ -21,8 +21,8 @@
         <div v-show="viewChoice === 'tvm'" v-html="tvmCode"/>
         <div v-show="viewChoice === 'vars'" v-html="varsCode"/>
       </div>
-      <div v-show="viewChoice === 'vis'">
-        Working In Progress
+      <div class="scaling-svg-container" v-show="viewChoice === 'vis'">
+        <svg class="scaling-svg" id="graph"/>
       </div>
     </div>
   </div>
@@ -31,6 +31,7 @@
 <script>
 
 import hljs from "highlight.js";
+import { graphviz } from 'd3-graphviz'
 
 export default {
   name: 'App',
@@ -57,8 +58,10 @@ export default {
             this.torchCode = `${hljs.highlight('python', response['torch']).value}`
             this.tvmCode = `${hljs.highlight('python', response['tvm']).value}`
             this.varsCode = `${hljs.highlight('json', response['vars']).value}`
-            this.loaded = true
+            let svg = graphviz('#graph')
+            svg.renderDot(response['dot'])
             this.loading = false
+            this.loaded = true
           })
     }
   }
@@ -74,4 +77,21 @@ export default {
   white-space: pre-wrap;
   font-family: Consolas, Monaco, monospace;
 }
+
+.scaling-svg-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 0 0 100%;
+  /* override this inline for aspect ratio other than square */
+}
+
+.scaling-svg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
 </style>

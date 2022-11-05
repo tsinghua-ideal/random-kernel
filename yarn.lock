@@ -1011,6 +1011,13 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
+"@hpcc-js/wasm@1.16.1":
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/@hpcc-js/wasm/-/wasm-1.16.1.tgz#beebfff1b540ae24bf7e575f23c665b984035d2d"
+  integrity sha512-izJM0Rgx60SEw11UcEfqmqCRovcogPOpHyilFLUxZhgLmvRhf+r8sYsw95vgTpp0E4tzseMM/x3WkthDeS/HeQ==
+  dependencies:
+    yargs "17.5.1"
+
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
   resolved "https://registry.npmmirror.com/@humanwhocodes/config-array/-/config-array-0.5.0.tgz"
@@ -2683,6 +2690,92 @@ csstype@^2.6.8:
   version "2.6.21"
   resolved "https://registry.npmmirror.com/csstype/-/csstype-2.6.21.tgz"
   integrity sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==
+
+"d3-color@1 - 2":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/d3-color/-/d3-color-2.0.0.tgz#8d625cab42ed9b8f601a1760a389f7ea9189d62e"
+  integrity sha512-SPXi0TSKPD4g9tw0NMZFnR95XVgUZiBH+uUTqQuDu1OsE2zomHU7ho0FISciaPvosimixwHFl3WHLGabv6dDgQ==
+
+"d3-dispatch@1 - 2", d3-dispatch@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/d3-dispatch/-/d3-dispatch-2.0.0.tgz#8a18e16f76dd3fcaef42163c97b926aa9b55e7cf"
+  integrity sha512-S/m2VsXI7gAti2pBoLClFFTMOO1HTtT0j99AuXLoGFKO6deHDdnv6ZGTxSTTUTgO1zVcv82fCOtDjYK4EECmWA==
+
+d3-drag@2:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/d3-drag/-/d3-drag-2.0.0.tgz#9eaf046ce9ed1c25c88661911c1d5a4d8eb7ea6d"
+  integrity sha512-g9y9WbMnF5uqB9qKqwIIa/921RYWzlUDv9Jl1/yONQwxbOfszAWTCm8u7HOTgJgRDXiRZN56cHT9pd24dmXs8w==
+  dependencies:
+    d3-dispatch "1 - 2"
+    d3-selection "2"
+
+"d3-ease@1 - 2":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/d3-ease/-/d3-ease-2.0.0.tgz#fd1762bfca00dae4bacea504b1d628ff290ac563"
+  integrity sha512-68/n9JWarxXkOWMshcT5IcjbB+agblQUaIsbnXmrzejn2O82n3p2A9R2zEB9HIEFWKFwPAEDDN8gR0VdSAyyAQ==
+
+d3-format@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/d3-format/-/d3-format-2.0.0.tgz#a10bcc0f986c372b729ba447382413aabf5b0767"
+  integrity sha512-Ab3S6XuE/Q+flY96HXT0jOXcM4EAClYFnRGY5zsjRGNy6qCYrQsMffs7cV5Q9xejb35zxW5hf/guKw34kvIKsA==
+
+d3-graphviz@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/d3-graphviz/-/d3-graphviz-4.4.0.tgz#6c817f6d9234bf3f6f446b4056d3bbd9b021081d"
+  integrity sha512-dpBriUvc+IntPsBu+aZfON5euuQu0wFsQqzPc6QF4AxTJScLh/R6YcR1HYw5g8FxIUy3crpjBlWntySgvps3BQ==
+  dependencies:
+    "@hpcc-js/wasm" "1.16.1"
+    d3-dispatch "^2.0.0"
+    d3-format "^2.0.0"
+    d3-interpolate "^2.0.1"
+    d3-path "^2.0.0"
+    d3-timer "^2.0.0"
+    d3-transition "^2.0.0"
+    d3-zoom "^2.0.0"
+
+"d3-interpolate@1 - 2", d3-interpolate@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/d3-interpolate/-/d3-interpolate-2.0.1.tgz#98be499cfb8a3b94d4ff616900501a64abc91163"
+  integrity sha512-c5UhwwTs/yybcmTpAVqwSFl6vrQ8JZJoT5F7xNFK9pymv5C0Ymcc9/LIJHtYIggg/yS9YHw8i8O8tgb9pupjeQ==
+  dependencies:
+    d3-color "1 - 2"
+
+d3-path@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/d3-path/-/d3-path-2.0.0.tgz#55d86ac131a0548adae241eebfb56b4582dd09d8"
+  integrity sha512-ZwZQxKhBnv9yHaiWd6ZU4x5BtCQ7pXszEV9CU6kRgwIQVQGLMv1oiL4M+MK/n79sYzsj+gcgpPQSctJUsLN7fA==
+
+d3-selection@2:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/d3-selection/-/d3-selection-2.0.0.tgz#94a11638ea2141b7565f883780dabc7ef6a61066"
+  integrity sha512-XoGGqhLUN/W14NmaqcO/bb1nqjDAw5WtSYb2X8wiuQWvSZUsUVYsOSkOybUrNvcBjaywBdYPy03eXHMXjk9nZA==
+
+"d3-timer@1 - 2", d3-timer@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/d3-timer/-/d3-timer-2.0.0.tgz#055edb1d170cfe31ab2da8968deee940b56623e6"
+  integrity sha512-TO4VLh0/420Y/9dO3+f9abDEFYeCUr2WZRlxJvbp4HPTQcSylXNiL6yZa9FIUvV1yRiFufl1bszTCLDqv9PWNA==
+
+d3-transition@2, d3-transition@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/d3-transition/-/d3-transition-2.0.0.tgz#366ef70c22ef88d1e34105f507516991a291c94c"
+  integrity sha512-42ltAGgJesfQE3u9LuuBHNbGrI/AJjNL2OAUdclE70UE6Vy239GCBEYD38uBPoLeNsOhFStGpPI0BAOV+HMxog==
+  dependencies:
+    d3-color "1 - 2"
+    d3-dispatch "1 - 2"
+    d3-ease "1 - 2"
+    d3-interpolate "1 - 2"
+    d3-timer "1 - 2"
+
+d3-zoom@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/d3-zoom/-/d3-zoom-2.0.0.tgz#f04d0afd05518becce879d04709c47ecd93fba54"
+  integrity sha512-fFg7aoaEm9/jf+qfstak0IYpnesZLiMX6GZvXtUSdv8RH2o4E2qeelgdU09eKS6wGuiGMfcnMI0nTIqWzRHGpw==
+  dependencies:
+    d3-dispatch "1 - 2"
+    d3-drag "2"
+    d3-interpolate "1 - 2"
+    d3-selection "2"
+    d3-transition "2"
 
 dayjs@^1.11.3:
   version "1.11.6"
@@ -6191,6 +6284,24 @@ yargs-parser@^20.2.2:
   version "20.2.9"
   resolved "https://registry.npmmirror.com/yargs-parser/-/yargs-parser-20.2.9.tgz"
   integrity sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==
+
+yargs-parser@^21.0.0:
+  version "21.1.1"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-21.1.1.tgz#9096bceebf990d21bb31fa9516e0ede294a77d35"
+  integrity sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==
+
+yargs@17.5.1:
+  version "17.5.1"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.5.1.tgz#e109900cab6fcb7fd44b1d8249166feb0b36e58e"
+  integrity sha512-t6YAJcxDkNX7NFYiVtKvWUz8l+PaKTLiL63mJYWR2GnHq2gjEWISzsLp9wg3aY36dY1j+gfIEL3pIF+XlJJfbA==
+  dependencies:
+    cliui "^7.0.2"
+    escalade "^3.1.1"
+    get-caller-file "^2.0.5"
+    require-directory "^2.1.1"
+    string-width "^4.2.3"
+    y18n "^5.0.5"
+    yargs-parser "^21.0.0"
 
 yargs@^16.0.0:
   version "16.2.0"
